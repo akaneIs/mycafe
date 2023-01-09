@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAT BAKERRY</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!--google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+  <!--/google fonts-->
+</head>
+<body>
+  <div class="menuBer">
+    <ul>
+      <li class="active" id="menu1"><a href="#" id="menu1">このタブは</a>
+      <div class="subMenu-1"><!--ドロップダウンメニュー-->
+        <ul>
+          <li><a href="#">サイトについて</a></li>
+          <li><a href="#">社訓</a></li>
+          <li><a href="#">事業内容</a></li>
+          <li><a href="#">スローガン</a></li>
+        </ul>
+      </div>
+    </li>
+      <li id="menu2"><a href="#" id="menu2">javascriptで</a>
+        <div class="subMenu-1"><!--ドロップダウンメニュー-->
+          <ul>
+            <li><a href="#">サイトについて</a></li>
+            <li><a href="#">社訓</a></li>
+            <li><a href="#">事業内容</a></li>
+            <li><a href="#">スローガン</a></li>
+          </ul>
+        </div>
+      </li>
+      <li id="menu3"><a href="#" id="menu3">作成</a>
+        <div class="subMenu-1"><!--ドロップダウンメニュー-->
+          <ul>
+            <li><a href="#">サイトについて</a></li>
+            <li><a href="#">社訓</a></li>
+            <li><a href="#">事業内容</a></li>
+            <li><a href="#">スローガン</a></li>
+          </ul>
+        </div>
+      </li>
+      <li id="menu4"><a href="#" id="menu4">しています。</a>
+        <div class="subMenu-1"><!--ドロップダウンメニュー-->
+          <ul>
+            <li><a href="#">サイトについて</a></li>
+            <li><a href="#">社訓</a></li>
+            <li><a href="#">事業内容</a></li>
+            <li><a href="#">スローガン</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+<div class="container-top">
+  <h1>CAT BAKERRY</h1>
+  <div class="icon">
+    <img src="img/_i_icon_12780_icon_127801_256.png" alt="アイコン"></div>
+    <p class="container-top-p">いつも出来立ての、ふんわり香ばしいパンです。新作も続々登場！<br>
+
+    もっちりふわふわの米粉を使用したこだわりのパンをご堪能ください。</p> 
+</div>
+<!--商品紹介-->
+<div class="athers">
+  <ul>
+  <li>サンドイッチ</li>
+  <li>ベーグル</li>
+  <li>ピザ</li>
+  <li>クロワッサン</li>
+  </ul>
+</div>
+
+
+
+<!--/商品紹介-->
+  <script>
+    const menus = [];/*配列の箱を作成*/
+    for(let i = 1 ; i <= 4; i++ ){
+      let menu = document.getElementById(`menu${i}`);/*menuのIDを取得*/
+      menus.push(menu);/*menuのIDを追加*/
+    }
+    document.addEventListener("click",(e) => {/*クリックされたらeを受け取る*/
+      console.log(e.target.id);/*押した要素をtargetでid名を取得*/
+      menus.map((menu) => {/*mapで一つ一つ取り出す*/
+        if(e.target.id === menu.id){/*e.target.idとmenuのidが等しければ*/
+          menu.classList.add("active");/*activeというcssを使用（今回は色を変える）*/
+        }else{
+          menu.classList.remove("active");/*違う時はactiveは削除（使用しない）*/
+        }
+      })
+    });
+  </script>
+</body>
+</html>

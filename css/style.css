@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(203, 235, 253);
+  background-size:cover ;
+  background-position: center;
+}
+
+.menuBer{
+  background-color: #5599c7;
+  text-align: center;
+}
+
+.menuBer ul li{
+  display: inline-block;
+  width: 120px;
+  margin: 0 35px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  cursor: pointer;
+  transition: all 0.5s;
+
+}
+
+.menuBer ul li a{
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.active,
+.menuBer ul li:hover{
+ background-color: rgb(195, 199, 246);
+}
+
+.subMenu-1{
+  position: absolute;
+  background-color: #5599c7;
+  margin-top: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: none;/*プルダウンを見えなくしている*/
+}
+.menuBer ul li:hover .subMenu-1{
+  display: block;/*ホバーした時見えなくしたプルダウンがブロック要素になり、見えるようになった*/
+}
+
+.menuBer ul li:hover .subMenu-1 ul li{
+  display: block;
+  width: 140px;
+  border-bottom: 1px dotted white;
+}
+.menuBer ul li:hover .subMenu-1 ul li:last-child{
+  border: none;
+}
+
+/*container*/
+.container-top {
+  text-align: center;
+  color: white;
+  background-image: url(../img/24836103_s.jpg);
+  background-size: cover;
+}
+
+
+.container-top h1 {
+  font-family: 'Rubik Bubbles', cursive;
+  font-size: 50px;
+  text-align: center;
+ padding-top:60px;
+}
+.container-top-p{
+  padding-bottom: 30px;
+}
+
+
+.athers ul li{
+display: inline-block;
+width: 120px;
+margin: 0 35px;
+padding-top: 25px;
+padding-bottom: 25px;
+cursor: pointer;
+transition: all 0.5s;
+
+}
+
